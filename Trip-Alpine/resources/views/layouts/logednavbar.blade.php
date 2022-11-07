@@ -17,7 +17,8 @@
                 
                 <li><a href="/services">Services</a></li>
                 <li><a href="/contact">Contact Us</a></li>
-                <li><a href="{{route('tourPackagelist')}}">Add Package</a></li>
+                <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+                <li><a href="{{route('package-list')}}">Add Package</a></li>
                 <li><a href="/myprofile">My Profile</a></li>
                 <li><a href="{{route('logout')}}">logout</a></li>
                 

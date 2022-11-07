@@ -42,10 +42,23 @@ Route::get('/registration',[AgencyAuthController::class, 'registration'])->middl
 Route::post('/register-user',[AgencyAuthController::class, 'registerUser'])->name('register-user');
 
 //Dashboard
-Route::get('/dashboard',[AgencyAuthController::class, 'dashboard'])->middleware('isLogedIn');
+Route::get('/dashboard',[AgencyAuthController::class, 'dashboard'])->middleware('isLogedIn')->name('dashboard');
 
 //Log Out
 Route::get('/logout',[AgencyAuthController::class, 'logout'])->name('logout');
 
 //Add Package
-Route::get('/tourPackagelist',[tourPackageController::class, 'tourPackage'])->name('tourPackagelist');
+Route::get('/package-list' , [tourPackageController::class,'index'])->name ('package-list');
+Route::get('/add-package' , [tourPackageController::class,'addPackage']);
+Route::post('/save-package' , [tourPackageController::class,'savePackage']);
+
+//Edit Package
+Route::get('/edit-package/{id}' , [tourPackageController::class,'editPackage']);
+Route::post('/update-package' , [tourPackageController::class,'updatePackage']);
+
+//Delete Package
+Route::get('/delete-package/{id}' , [tourPackageController::class,'deletePackage']);
+
+
+
+
