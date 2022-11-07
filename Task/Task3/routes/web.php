@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\formValidationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,3 @@ use App\Http\Controllers\formValidationController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/form-validation', [formValidationController::class, 'formValidation']);
-Route::post('/submit-validation', [formValidationController::class, 'submitValidation'])->name('submit-validation');
