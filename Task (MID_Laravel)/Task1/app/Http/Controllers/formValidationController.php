@@ -13,11 +13,11 @@ class formValidationController extends Controller
 
     public function submitValidation(Request $request) {
        $request->validate([
-        'name'=>'required|min:1|max:20',
+        'name'=>'required|regex:/(^([a-zA-z]+)(\d+)?$)/u',
         'email'=>'required|email|unique:users',
         'password'=>'required|regex:^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$',
         'dob'=>'required|before:today',
-        'phone'=>'required|numeric|digits:11'
+        'phone'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:11'
 
        ]);
      }
