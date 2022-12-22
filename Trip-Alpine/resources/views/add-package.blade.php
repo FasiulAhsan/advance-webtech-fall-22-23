@@ -13,11 +13,13 @@
 			<div class="row align-items-center">
 				<div class="">
                     <h3>Add Tour Package</h3><hr>
+                  
                         @if (Session::has('success'))
                             <div class="alert alert-success" role="alert">
                                 {{Session::get('success')}}
                             </div>
                         @endif
+              
 
 
                     <form action="{{url('save-package')}}" method="post">
@@ -42,6 +44,7 @@
                         </div>
                         @enderror
                     </div>
+                    <input type="hidden" value="{{ Session()->get('loginId')}}">
 
                     <div class="md-3">
                         <label class="form-lable">Day</label>

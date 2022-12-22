@@ -30,6 +30,8 @@ class tourPackageController extends Controller
 
         
         $place = $request->place;
+        $user_id = $request->user_id;
+
         $description = $request->description;
         $day = $request->day;
         $facilities = $request->facilities;

@@ -10,16 +10,16 @@
 <nav class="site-nav">
     <div class="container">
         <div class="site-navigation">
-            <a href="index.html" class="logo m-0">Trip Alpine <span class="text-primary">.</span></a>
+            <a href="{{url('/')}}" class="logo m-0">Trip Alpine <span class="text-primary">.</span></a>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="{{url('/')}}">Home</a></li>
                 
                 <li><a href="/services">Services</a></li>
                 <li><a href="/contact">Contact Us</a></li>
                 <li><a href="{{route('dashboard')}}">Dashboard</a></li>
                 <li><a href="{{route('package-list')}}">Add Package</a></li>
-                <li><a href="/myprofile">My Profile</a></li>
+                <li><a href="#">My Profile</a></li>
                 <li><a href="{{route('logout')}}">logout</a></li>
                 
 

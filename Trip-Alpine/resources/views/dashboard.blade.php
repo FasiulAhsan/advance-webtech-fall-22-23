@@ -14,6 +14,7 @@
 			<div class="row align-items-center">
 				<div class="">
                     <h3>Welcome to Dashboard</h3><hr>
+                    <h1> this is id     {{  Session()->get('loginId')}}</h1>
                     <table class="table">
                         <thead>
                             <th>Name</th>
@@ -30,7 +31,7 @@
                                 <td>{{$data->email}}</td>
                                 <td>{{$data->agency_name}}</td>
                                 <td>{{$data->agency_code}}</td>
-                                <td><a href="logout">update</a></td>
+                                <td><a href="#">update</a></td>
                             </tr>
                         </tbody>
                     </table>

@@ -31,7 +31,7 @@ Route::get('/elements', function () {
 });
 
 //Log In
-Route::get('/login',[AgencyAuthController::class, 'login'])->middleware('alreadyLoggedIn');
+Route::get('/login',[AgencyAuthController::class, 'login'])->middleware('alreadyLoggedIn')->name('login');
 Route::post('/login-user',[AgencyAuthController::class, 'loginUser'])->name('login-user');
 
 
@@ -50,7 +50,7 @@ Route::get('/logout',[AgencyAuthController::class, 'logout'])->name('logout');
 //Add Package
 Route::get('/package-list' , [tourPackageController::class,'index'])->name ('package-list');
 Route::get('/add-package' , [tourPackageController::class,'addPackage']);
-Route::post('/save-package' , [tourPackageController::class,'savePackage']);
+Route::post('/save-package/{id}' , [tourPackageController::class,'savePackage']);
 
 //Edit Package
 Route::get('/edit-package/{id}' , [tourPackageController::class,'editPackage']);
